@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400&display=swap" rel="stylesheet">
+	<title>ESP32 Control</title>
+</head>
+
+<body class="bg-[url('background.jpg')] h-full w-full bg-cover flex justify-center items-center">
+	<div
+		class="xl:h-5/6 xl:w-1/4 bg-sky-700 flex flex-col justify-center justify-items-center items-center max-sm:w-full max-sm:h-full sm:w-full sm:h-full">
+		<p class="text-white font-['Kanit'] self-center md:text-base">Buzzer button: %STATE%</p>
+		<a href="/buzz/on" class="self-center"><button
+				class="border-0 rounded bg-sky-600 md:px-3 text-white font-semibold active:bg-sky-900 hover:bg-sky-800 md:text-base px-3">Buzzer:
+				on</button></a>
+		<a href="/buzz/off" class="self-center sm:text-[15px] md:text-base"><button
+				class="border-0 rounded bg-sky-600 px-3 text-white font-semibold active:bg-sky-500 mt-2 hover:bg-sky-800 md:text-base">Buzzer:
+				off</button></a>
+		<p class="text-white font-['Kanit'] self-center mt-5">Fan button: %FAN%</p>
+		<a href="/fan/on" class="self-center"><button
+				class="border-0 rounded bg-sky-600 px-3 text-white font-semibold active:bg-sky-900 mb-2 hover:bg-sky-800">Fan:
+				on</button></a>
+		<a href="/fan/off" class="self-center"><button
+				class="border-0 rounded bg-sky-600 px-3 text-white font-semibold active:bg-sky-900 mb-3 hover:bg-sky-800">Fan:
+				off</button></a>
+		<form action="/get" class="flex flex-col">
+			<p class="text-white font-['Kanit'] self-center">Hour</p>
+			<input type="text"
+				class="text-white font-['Kanit'] outline-0 border-0 border-b-2 bg-sky-700 focus:border-green-500 mb-3"
+				name="input1"><br>
+			<p class="text-white font-['Kanit'] self-center">Minute</p>
+			<input type="text"
+				class="font-['Kanit'] text-white outline-0 border-0 border-b-2 bg-sky-700 focus:border-green-500 mb-5"
+				name="input2"><br>
+			<input type="submit" value="Submit Jam"
+				class="border-0 rounded bg-sky-600 py-2 px-3 text-white font-semibold hover:bg-sky-800 active:border-[1.5px] active:bg-sky-900">
+		</form>
+	</div>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
